@@ -6,8 +6,8 @@ import ecomImg from "@/public/ecom.png";
 import jamandplayImg from "@/public/jamandplay.png";
 import trelloImg from "@/public/trello.png";
 import landingPage from "@/public/travel-agency.png";
-import caption from '@/public/captionme.png'
-import discord from '@/public/discord.png'
+import cavesstudio from "@/public/cavesstudio.png";
+import ccm from "@/public/ccm.png";
 
 export const links = [
   {
@@ -56,60 +56,48 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
+  {
+    title: "Caves Studio Architect",
+    description:
+      "Caves Studio Architect is a platform for architects to showcase their work and get leads.",
+    tags: ["React.js", "NodeJS", "Twilio", "JavaScript", "MongoDB", "Antd"],
+    imageUrl: cavesstudio,
+    projectLink: "https://cavesstudio.com/",
+    githubLink: "https://github.com/AkkiD7/construction_portal_frontend",
+  },
+  {
+    title: "Construction Management",
+    description:
+      "Construction Management is a site where users can manage and shwocase their construction projects.",
+    tags: [
+      "React.js",
+      "Vercel",
+      "NodeMailer",
+      "NodeJS",
+      "Twilio",
+      "Javascript",
+    ],
+    imageUrl: ccm,
+    projectLink: "https://www.cavesconstruction.com/",
+    githubLink: "https://github.com/AkkiD7/construction_portal_frontend",
+  },
 
   {
-    title: "Caption-Me",
-    description:
-      "Caption Me is a tool that allows users to upload a video, transcribe it, edit the timeframe and words, and add captions with desired colors.",
-    tags: ["Next.js", "AWS", "Ratelimiter", "Redis", "Upstash", "Typescript"],
-    imageUrl: caption,
-    projectLink: 'https://caption-me.vercel.app/',
-    githubLink: 'https://github.com/rohitt-gupta/caption-me',
-  },
-  {
-    title: "Team Chat application",
-    description:
-      "Caption Me is a tool that allows users to upload a video, transcribe it, edit the timeframe and words, and add captions with desired colors.",
-    tags: ["Next.js", "AWS", "Ratelimiter", "Redis", "Upstash", "Typescript"],
-    imageUrl: discord,
-    projectLink: 'https://discord-clone-rho-dun.vercel.app/',
-    githubLink: 'https://github.com/rohitt-gupta/discord-clone',
-  },
-  {
-    title: "Ecommerce: Admin and Client",
-    description:
-      "Full stack ecommerce app with multiple stores functionality exposing public APIs for client app. ",
-    tags: ["Next.js", "Tailwind", "shad-cn", "MySQL", "Prisma", "Typescript"],
-    imageUrl: ecomImg,
-    projectLink: 'https://ecom-dashboard-five.vercel.app/',
-    githubLink: 'https://github.com/rohitt-gupta/ecommerce-store',
-  },
-  {
     title: "Travel Agency UI/UX",
-    description:
-      "SImple landing page desgin using nextjs and tailwindcss. ",
+    description: "SImple landing page desgin using nextjs and tailwindcss. ",
     tags: ["Next.js", "Tailwind", "shad-cn", "MySQL", "Prisma", "Typescript"],
     imageUrl: landingPage,
-    projectLink: 'https://landing-page-tan-seven.vercel.app/',
-    githubLink: 'https://github.com/rohitt-gupta/landing-page',
+    projectLink: "https://landing-page-tan-seven.vercel.app/",
+    githubLink: "https://github.com/rohitt-gupta/landing-page",
   },
   {
-    title: "Jam and Play",
+    title: "Event Planner Web App",
     description:
-      "Learn the art and science of creating music, with Jam and Play's comprehensive courses",
-    tags: ["React", "TypeScript", "Headless UI", "Next.js", "Tailwind", "Framer-motion"],
-    imageUrl: jamandplayImg,
-    projectLink: 'https://www.jamandplay.com/',
-    githubLink: '',
-  },
-  {
-    title: "TaskFlow:The Trello Clone",
-    description:
-      "A simple yet beautiful todo app with drag ad drop functionality, backed by appwrite cloud for seamless data integration.  ",
-    tags: ["React", "Next.js", "Appwrite", "Tailwind", "React-beautiful-dnd"],
-    imageUrl: trelloImg,
-    projectLink: 'https://trello-clone-xjcj.vercel.app/',
-    githubLink: 'https://github.com/rohitt-gupta/trello-clone',
+      "Event Planner is a web app where users can plan events and invite their friends.",
+    tags: ["Java", "HTML", "CSS", "Javascript", "SQL"],
+    imageUrl: landingPage,
+    projectLink: "https://landing-page-tan-seven.vercel.app/",
+    githubLink: "https://github.com/rohitt-gupta/landing-page",
   },
 ] as const;
 
