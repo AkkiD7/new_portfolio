@@ -86,7 +86,7 @@ export const projectsData = [
     tags: ["Next.js", "Tailwind", "shad-cn", "MySQL", "Prisma", "Typescript"],
     imageUrl: landingPage,
     projectLink: "https://landing-page-tan-seven.vercel.app/",
-    githubLink: "https://github.com/rohitt-gupta/landing-page",
+    githubLink: "https://github.com/AkkiD7/travel_agency_ui_ux",
   },
   {
     title: "Event Planner Web App",
@@ -94,8 +94,8 @@ export const projectsData = [
       "Event Planner is a web app where users can plan events and invite their friends.",
     tags: ["Java", "HTML", "CSS", "Javascript", "SQL"],
     imageUrl: eventplanner,
-    projectLink: "https://landing-page-tan-seven.vercel.app/",
-    githubLink: "https://github.com/rohitt-gupta/landing-page",
+    projectLink: "https://github.com/AkkiD7/Event-Planner-Project/tree/main/Planner-main",
+    githubLink: "https://github.com/AkkiD7/Event-Planner-Project/tree/main/Planner-main",
   },
 ] as const;
 
