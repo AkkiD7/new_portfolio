@@ -2,9 +2,7 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import ecomImg from "@/public/ecom.png";
-import jamandplayImg from "@/public/jamandplay.png";
-import trelloImg from "@/public/trello.png";
+import eventplanner from "@/public/eventplanner.png";
 import landingPage from "@/public/travel-agency.png";
 import cavesstudio from "@/public/cavesstudio.png";
 import ccm from "@/public/ccm.png";
@@ -95,7 +93,7 @@ export const projectsData = [
     description:
       "Event Planner is a web app where users can plan events and invite their friends.",
     tags: ["Java", "HTML", "CSS", "Javascript", "SQL"],
-    imageUrl: landingPage,
+    imageUrl: eventplanner,
     projectLink: "https://landing-page-tan-seven.vercel.app/",
     githubLink: "https://github.com/rohitt-gupta/landing-page",
   },
