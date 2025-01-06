@@ -47,7 +47,7 @@ function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         className='mt-4 mb-10 px-4 font-medium text-2xl sm:text-4xl !leading-[1.5]'>
-        <span className="font-bold">Hello, I'm Akshay.</span> I've been working in web development for 1.5 year, with{" "}
+        <span className="font-bold">Hello, I'm Akshay.</span> I've been working in web development, with{" "}
         <span className="font-bold">React, Nodejs and JavaScript</span> as my focus. I enjoy
         building stuff on<span className="italic"> WEB</span>.
       </motion.h1>
