@@ -36,8 +36,8 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Software Developer",
-    location: "Caves Infotech, Nashik",
+    title: "Jr. Software Engineer",
+    location: "Enkify Solutions Private Limited, Banglore",
     description:
       "I'm now a software developer. My stack includes React, Node.js, JavaScript, Tailwind and Framer-motion.",
     icon: React.createElement(FaReact),
@@ -45,7 +45,7 @@ export const experiencesData = [
   },
   {
     title: "Software Developer Intern",
-    location: "Nutshell Infosoft, Nashik",
+    location: "Nutshell Infosoft Private Limited, Nashik",
     description:
       "Started as a front end web developer using Reactjs and Material UI. Majorly worked on bug fixing, refactoring and folder structure.",
     icon: React.createElement(CgWorkAlt),
