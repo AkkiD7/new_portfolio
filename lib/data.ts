@@ -34,14 +34,23 @@ export const links = [
   },
 ] as const;
 
+
 export const experiencesData = [
+  {
+    title: "Software Developer",
+    location: "Calibort Technologies, Pune",
+    description:
+      "Currently working as a software developer. I'm contributing to full-stack development using modern technologies and scalable architecture design.",
+    icon: React.createElement(MdWork),
+    date: "Feb 2025 - Present",
+  },
   {
     title: "Jr. Software Engineer",
     location: "Enkify Solutions Private Limited, Banglore",
     description:
       "I'm now a software developer. My stack includes React, Node.js, JavaScript, Tailwind and Framer-motion.",
     icon: React.createElement(FaReact),
-    date: "Sept 2023 - present",
+    date: "Aug 2023 - Dec 2024",
   },
   {
     title: "Software Developer Intern",
