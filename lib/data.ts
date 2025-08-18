@@ -1,7 +1,5 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
 import eventplanner from "@/public/eventplanner.png";
 import landingPage from "@/public/travel-agency.png";
 import cavesstudio from "@/public/cavesstudio.png";
@@ -37,30 +35,31 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Software Developer",
-    location: "Calibort Technologies, Pune",
+    title: "Full Stack Developer",
+    location: "Calibort Technologies, Nashik",
     description:
-      "Currently working as a software developer. I'm contributing to full-stack development using modern technologies and scalable architecture design.",
-    icon: React.createElement(MdWork),
-    date: "Feb 2025 - Present",
+      "Built scalable backend services with Node.js, Express, Sequelize, and MySQL (25% faster APIs). Developed responsive UIs in React + TypeScript, and managed end-to-end deployments on DigitalOcean with Nginx and PM2.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Feb 2025 – Aug 2025",
   },
   {
-    title: "Jr. Software Engineer",
-    location: "Enkify Solutions Private Limited, Banglore",
+    title: "Junior Software Engineer",
+    location: "Enkify Solutions, Bangalore",
     description:
-      "I'm now a software developer. My stack includes React, Node.js, JavaScript, Tailwind and Framer-motion.",
-    icon: React.createElement(FaReact),
-    date: "Aug 2023 - Dec 2024",
+      "Developed high-performance APIs with Node.js, Express, and MongoDB (20% faster load times). Created reusable React components, optimized database schemas, and improved feature delivery by 30%.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Jan 2024 – Feb 2025",
   },
   {
     title: "Software Developer Intern",
-    location: "Nutshell Infosoft Private Limited, Nashik",
+    location: "Nutshell Infosoft, Nashik",
     description:
-      "Started as a front end web developer using Reactjs and Material UI. Majorly worked on bug fixing, refactoring and folder structure.",
+      "Contributed to front-end development with React.js and Tailwind CSS, and assisted in backend APIs using Node.js and MongoDB. Gained experience in debugging, testing, and building modular features.",
     icon: React.createElement(CgWorkAlt),
-    date: "Feb 2023 - Aug 2023",
+    date: "Jul 2023 – Dec 2023",
   },
 ] as const;
+
 
 export const projectsData = [
   {
@@ -112,15 +111,24 @@ export const skillsData = [
   "HTML",
   "CSS",
   "JavaScript",
+  "TypeScript",
   "React",
   "Node.js",
-  "PHP",
-  "Git",
-  "Tailwind",
+  "Express.js",
   "MongoDB",
-  "Express",
-  "SQL",
-  "PostgreSQL",
-  "Open Source",
+  "MySQL",
+  "Sequelize",
+  "Tailwind CSS",
+  "Material-UI",
+  "Git",
+  "Postman",
+  "Swagger",
+  "JWT",
+  "Nginx",
+  "PM2",
+  "Linux",
+  "AWS (S3, EC2)",
+  "DigitalOcean",
   "Framer Motion",
 ] as const;
+
