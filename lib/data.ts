@@ -44,11 +44,11 @@ export const experiencesData = [
   },
   {
     title: "Junior Software Engineer",
-    location: "Enkify Solutions, Bangalore",
+    location: "Delta India, Pune",
     description:
       "Developed high-performance APIs with Node.js, Express, and MongoDB (20% faster load times). Created reusable React components, optimized database schemas, and improved feature delivery by 30%.",
     icon: React.createElement(CgWorkAlt),
-    date: "Jan 2024 – Feb 2025",
+    date: "Jan 2023 – Jan 2025",
   },
   {
     title: "Software Developer Intern",
