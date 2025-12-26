@@ -1,14 +1,29 @@
-import React from 'react'
+'use client'
 
+import { motion } from 'framer-motion'
+import React from 'react'
 
 type SectionHeadingProps = {
   children: React.ReactNode
 }
 
-function SectionHeading({ children }: SectionHeadingProps) {
+export default function SectionHeading({ children }: SectionHeadingProps) {
   return (
-    <h2 className="text-3xl font-medium capitalize mb-8 text-center flex items-center justify-center">{children}</h2>
+    <motion.h2
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, ease: 'easeOut' }}
+      viewport={{ once: true }}
+      className="
+        mb-14
+        flex items-center justify-center gap-3
+        text-center
+        text-2xl sm:text-3xl
+        font-semibold
+        tracking-tight
+      "
+    >
+      {children}
+    </motion.h2>
   )
 }
-
-export default SectionHeading

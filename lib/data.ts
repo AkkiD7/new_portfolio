@@ -4,6 +4,13 @@ import eventplanner from "@/public/eventplanner.png";
 import landingPage from "@/public/travel-agency.png";
 import cavesstudio from "@/public/cavesstudio.png";
 import ccm from "@/public/ccm.png";
+import sunsolarpower from "@/public/sunsolarpower.png";
+import {
+  HiOutlineCode,
+  HiOutlineServer,
+  HiOutlineLightningBolt,
+  HiOutlineCloudUpload,
+} from "react-icons/hi";
 
 export const links = [
   {
@@ -14,6 +21,8 @@ export const links = [
     name: "About",
     hash: "#about",
   },
+  { name: "Services", hash: "#services" },
+
   {
     name: "Projects",
     hash: "#projects",
@@ -32,13 +41,47 @@ export const links = [
   },
 ] as const;
 
+export const servicesData = [
+  {
+    title: "Web Application Development",
+    description:
+      "Build fast, scalable, and responsive web applications using React, Next.js, and modern frontend best practices.",
+    icon: HiOutlineCode,
+  },
+  {
+    title: "Backend & API Development",
+    description:
+      "Design and develop secure, high-performance REST APIs with Node.js, Express, and scalable database architecture.",
+    icon: HiOutlineServer,
+  },
+  {
+    title: "Performance & Optimization",
+    description:
+      "Improve application speed, optimize database queries, and refactor code for better performance and maintainability.",
+    icon: HiOutlineLightningBolt,
+  },
+  {
+    title: "Deployment & Maintenance",
+    description:
+      "Deploy applications on AWS, DigitalOcean, or Vercel with proper CI/CD, Nginx setup, and ongoing support.",
+    icon: HiOutlineCloudUpload,
+  },
+] as const;
 
 export const experiencesData = [
   {
     title: "Full Stack Developer",
+    location: "Empiric Business Solutions, Pune",
+    description:
+      "Currently working on a CRM system, building scalable backend APIs and modern frontend interfaces. Responsible for designing core modules, integrating business workflows, and improving performance and maintainability using React, Node.js, and relational databases.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Dec 2025 – Present",
+  },
+  {
+    title: "Full Stack Developer",
     location: "Calibort Technologies, Nashik",
     description:
-      "Built scalable backend services with Node.js, Express, Sequelize, and MySQL (25% faster APIs). Developed responsive UIs in React + TypeScript, and managed end-to-end deployments on DigitalOcean with Nginx and PM2.",
+      "Built scalable backend services with Node.js, Express, Sequelize, and MySQL, improving API performance by 25%. Developed responsive UIs using React and TypeScript, and handled deployments using Nginx, PM2, and DigitalOcean.",
     icon: React.createElement(CgWorkAlt),
     date: "Feb 2025 – Aug 2025",
   },
@@ -46,7 +89,7 @@ export const experiencesData = [
     title: "Junior Software Engineer",
     location: "Delta India, Pune",
     description:
-      "Developed high-performance APIs with Node.js, Express, and MongoDB (20% faster load times). Created reusable React components, optimized database schemas, and improved feature delivery by 30%.",
+      "Developed high-performance APIs with Node.js, Express, and MongoDB, reducing load times by 20%. Created reusable React components, optimized database schemas, and improved overall feature delivery speed.",
     icon: React.createElement(CgWorkAlt),
     date: "Jan 2023 – Jan 2025",
   },
@@ -54,81 +97,100 @@ export const experiencesData = [
     title: "Software Developer Intern",
     location: "Nutshell Infosoft, Nashik",
     description:
-      "Contributed to front-end development with React.js and Tailwind CSS, and assisted in backend APIs using Node.js and MongoDB. Gained experience in debugging, testing, and building modular features.",
+      "Worked on frontend development using React.js and Tailwind CSS, and assisted with backend API development using Node.js and MongoDB. Gained hands-on experience in debugging, testing, and building modular features.",
     icon: React.createElement(CgWorkAlt),
     date: "Jul 2023 – Dec 2023",
   },
 ] as const;
 
-
 export const projectsData = [
   {
     title: "Caves Studio Architect",
+    featured: true,
     description:
-      "Caves Studio Architect is a platform for architects to showcase their work and get leads.",
-    tags: ["React.js", "NodeJS", "Twilio", "JavaScript", "MongoDB", "Antd"],
+      "Built a full-stack web platform that helps architects showcase their projects, receive client inquiries, and manage content through an admin dashboard to grow their business online.",
+    tags: ["React.js", "Node.js", "MongoDB", "Twilio", "Ant Design"],
     imageUrl: cavesstudio,
     projectLink: "https://cavesstudio.com/",
     githubLink: "https://github.com/AkkiD7/construction_portal_frontend",
   },
+
   {
-    title: "Construction Management",
+    title: "Solar Spark – Solar Energy Website",
+    featured: true,
     description:
-      "Construction Management is a site where users can manage and shwocase their construction projects.",
-    tags: [
-      "React.js",
-      "Vercel",
-      "NodeMailer",
-      "NodeJS",
-      "Twilio",
-      "Javascript",
-    ],
+      "Designed and developed a modern solar energy website to promote solar solutions, generate customer leads, and build trust through a clean, responsive, and professional UI.",
+    tags: ["Next.js", "Tailwind CSS", "TypeScript", "Responsive Design"],
+    imageUrl: sunsolarpower,
+    projectLink: "https://solar-spark-designs.vercel.app/",
+    githubLink: "https://github.com/AkkiD7/solar-spark-designs",
+  },
+
+  {
+    title: "Travel Agency UI/UX",
+    featured: false,
+    description:
+      "Created a clean and responsive landing page for a travel agency to showcase tour packages, improve user engagement, and deliver a smooth browsing experience.",
+    tags: ["Next.js", "Tailwind CSS", "TypeScript", "Prisma"],
+    imageUrl: landingPage,
+    projectLink: "https://landing-page-tan-seven.vercel.app/",
+    githubLink: "https://github.com/AkkiD7/travel_agency_ui_ux",
+  },
+
+  {
+    title: "Construction Management System",
+    featured: false,
+    description:
+      "Developed a web application that allows construction firms to manage projects, present their work professionally, and communicate with clients via email and SMS notifications.",
+    tags: ["React.js", "Node.js", "Nodemailer", "Twilio", "Vercel"],
     imageUrl: ccm,
     projectLink: "https://www.cavesconstruction.com/",
     githubLink: "https://github.com/AkkiD7/construction_portal_frontend",
   },
 
   {
-    title: "Travel Agency UI/UX",
-    description: "SImple landing page desgin using nextjs and tailwindcss. ",
-    tags: ["Next.js", "Tailwind", "shad-cn", "MySQL", "Prisma", "Typescript"],
-    imageUrl: landingPage,
-    projectLink: "https://landing-page-tan-seven.vercel.app/",
-    githubLink: "https://github.com/AkkiD7/travel_agency_ui_ux",
-  },
-  {
     title: "Event Planner Web App",
+    featured: false,
     description:
-      "Event Planner is a web app where users can plan events and invite their friends.",
-    tags: ["Java", "HTML", "CSS", "Javascript", "SQL"],
+      "Built a web application that enables users to plan events, manage guest lists, send invitations, and organize event details with a simple and user-friendly interface.",
+    tags: ["Java", "HTML", "CSS", "JavaScript", "SQL"],
     imageUrl: eventplanner,
-    projectLink: "https://github.com/AkkiD7/Event-Planner-Project/tree/main/Planner-main",
-    githubLink: "https://github.com/AkkiD7/Event-Planner-Project/tree/main/Planner-main",
+    projectLink:
+      "https://github.com/AkkiD7/Event-Planner-Project/tree/main/Planner-main",
+    githubLink:
+      "https://github.com/AkkiD7/Event-Planner-Project/tree/main/Planner-main",
   },
 ] as const;
 
-export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Node.js",
-  "Express.js",
-  "MongoDB",
-  "MySQL",
-  "Sequelize",
-  "Tailwind CSS",
-  "Material-UI",
-  "Git",
-  "Postman",
-  "Swagger",
-  "JWT",
-  "Nginx",
-  "PM2",
-  "Linux",
-  "AWS (S3, EC2)",
-  "DigitalOcean",
-  "Framer Motion",
-] as const;
+export const skillsData = {
+  frontend: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Tailwind CSS",
+    "Material-UI",
+    "Framer Motion",
+  ],
+  backend: [
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "MySQL",
+    "Sequelize",
+    "JWT",
+  ],
+  devops: [
+    "Git",
+    "Postman",
+    "Swagger",
+    "Nginx",
+    "PM2",
+    "Linux",
+    "AWS (S3, EC2)",
+    "DigitalOcean",
+  ],
+} as const
+
 

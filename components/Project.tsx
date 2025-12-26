@@ -1,11 +1,10 @@
-"use client";
+'use client'
 
-import { useRef } from "react";
-import { projectsData } from "@/lib/data";
-import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+import { projectsData } from '@/lib/data'
 
-type ProjectProps = (typeof projectsData)[number];
+type ProjectProps = (typeof projectsData)[number]
 
 export default function Project({
   title,
@@ -13,68 +12,109 @@ export default function Project({
   tags,
   imageUrl,
   projectLink,
-  githubLink
+  githubLink,
 }: ProjectProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1.33 1"],
-  });
-  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-
   return (
-    <motion.div
-      ref={ref}
-      style={{
-        scale: scaleProgess,
-        opacity: opacityProgess,
-      }}
-      className="group mb-3 sm:mb-8 sm:pb-3 last:mb-0"
+    <motion.article
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.45, ease: 'easeOut' }}
+      viewport={{ once: true }}
+      className="
+        group
+        relative
+        overflow-hidden
+        rounded-2xl
+        border border-black/5 dark:border-white/10
+        bg-white dark:bg-white/10
+        shadow-sm
+        hover:shadow-xl
+        transition
+      "
     >
-      <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[24rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-          <h3 className="text-2xl font-semibold">{title}</h3>
+      <div className="flex flex-col sm:flex-row h-full">
+        {/* Content */}
+        <div className="flex flex-col justify-between p-6 sm:w-[55%]">
+          <div>
+            <h3 className="text-xl font-semibold">{title}</h3>
 
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
-            {description}
-          </p>
+            <p className="mt-3 text-sm leading-relaxed text-gray-700 dark:text-white/70 line-clamp-4">
+              {description}
+            </p>
 
-          <ul className="flex flex-wrap mt-4 sm:mt-6 gap-2 ">
-            {tags.map((tag, index) => (
-              <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
-                key={index}
+            <ul className="mt-4 flex flex-wrap gap-2">
+              {tags.map((tag, index) => (
+                <li
+                  key={index}
+                  className="
+                    rounded-full
+                    bg-gray-900/80
+                    px-3 py-1
+                    text-[0.7rem]
+                    uppercase
+                    tracking-wide
+                    text-white
+                  "
+                >
+                  {tag}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Actions */}
+          <div className="mt-6 flex gap-3">
+            {githubLink && (
+              <a
+                href={githubLink}
+                target="_blank"
+                className="
+                  rounded-lg
+                  border border-black/10 dark:border-white/20
+                  px-5 py-2
+                  text-sm
+                  transition
+                  hover:bg-black hover:text-white
+                  dark:hover:bg-white dark:hover:text-black
+                "
               >
-                {tag}
-              </li>
-            ))}
-          </ul>
-
-          <div className=" my-6 flex items-center justify-start gap-3">
-          <a target="_blank" href={githubLink == null ? "https://github.com/rohitt-gupta" : githubLink} className="bg-gray-900 text-white px-7 py-3 flex items-center gap-2 outline-none rounded-lg focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition">Github</a>
-          <a target="_blank" href={projectLink} className="bg-gray-900 text-white px-7 py-3 flex items-center gap-2 outline-none rounded-lg focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition">Live</a>
+                GitHub
+              </a>
+            )}
+            <a
+              href={projectLink}
+              target="_blank"
+              className="
+                rounded-lg
+                bg-gray-900
+                px-5 py-2
+                text-sm
+                text-white
+                transition
+                hover:bg-gray-950
+              "
+            >
+              Live
+            </a>
           </div>
         </div>
 
-        <Image
-          src={imageUrl}
-          alt="Project I worked on"
-          quality={95}
-          className="absolute hidden sm:block top-[4rem] -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
-        transition 
-        group-hover:scale-[1.04]
-        group-hover:-translate-x-3
-        group-hover:translate-y-3
-        group-hover:-rotate-2
-
-        group-even:group-hover:translate-x-3
-        group-even:group-hover:translate-y-3
-        group-even:group-hover:rotate-2
-
-        group-even:right-[initial] group-even:-left-40"
-        />
-      </section>
-    </motion.div>
-  );
+        {/* Image */}
+        <div className="relative sm:w-[45%] hidden sm:block">
+          <Image
+            src={imageUrl}
+            alt={title}
+            quality={95}
+            fill
+            className="
+              object-cover
+              transition
+              duration-500
+              group-hover:scale-[1.05]
+            "
+          />
+        </div>
+      </div>
+    </motion.article>
+  )
 }
